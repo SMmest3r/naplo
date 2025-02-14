@@ -277,9 +277,9 @@ class KretaClient {
     print("REFRESH TOKEN BELOW");
     print(refreshToken);
 
-  if (!DateTime.now().isAfter(loginUser.accessTokenExpire)) {
-      return 'success';
-  }
+  // if (!DateTime.now().isAfter(loginUser.accessTokenExpire)) {
+  //     return 'success';
+  // }
 
     if (refreshToken != null) {
       // print("REFRESHING LOGIN");
