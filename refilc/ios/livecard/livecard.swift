@@ -78,6 +78,7 @@ struct LockScreenLiveActivityView: View {
                       .font(.body)
                       .bold()
                       .multilineTextAlignment(.center)
+                      .getContrastText(backgroundColor: Color(hex: context.state.color))
                   }
                 }
 
@@ -85,6 +86,7 @@ struct LockScreenLiveActivityView: View {
                 if (context.state.description != "") {
                   Text(context.state.description)
                     .font(.subheadline)
+                    .getContrastText(backgroundColor: Color(hex: context.state.color))
                 }
 
                 // Következő óra
@@ -99,12 +101,13 @@ struct LockScreenLiveActivityView: View {
                         .font(.caption)
                 }
                 .multilineTextAlignment(.center)
+                .getContrastText(backgroundColor: Color(hex: context.state.color))
               } else {
                 Spacer(minLength: 5)
                 Text("Ez az utolsó óra! Kitartást!")
                   .font(.system(size: 15))
               }
-                
+                .getContrastText(backgroundColor: Color(hex: context.state.color))
             }
             .padding(15)
 
@@ -117,6 +120,7 @@ struct LockScreenLiveActivityView: View {
                 .font(.title2)
                 .monospacedDigit()
                 .padding(.trailing)
+                .getContrastText(backgroundColor: Color(hex: context.state.color))
         }
 //        .activityBackgroundTint(
 //            context.state.color != "#676767"
@@ -127,6 +131,7 @@ struct LockScreenLiveActivityView: View {
           Color.clear
         )
         .foregroundStyle(Color(hex: context.state.color))
+        .getContrastText(backgroundColor: Color(hex: context.state.color))
     }
 }
 
